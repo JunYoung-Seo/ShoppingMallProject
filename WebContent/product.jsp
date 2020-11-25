@@ -1,3 +1,4 @@
+<%@page import="dao.ProductRepository"%>
 <%@ page contentType ="text/html; charset=utf-8" %>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="dto.Product" %>
@@ -19,8 +20,11 @@
 		</div>
 	</div>
 	<%
+		//상품의 id값을 기반으로 상품정보를가져오기|상품정보 dao의저장, dao의값중 id값을 product에 저장
 		String id = request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+		//Product product = productDAO.getProductById(id);
+		ProductRepository dao = ProductRepository.getInstance();
+		Product product = dao.getProductById(id);
 	%>
 
 

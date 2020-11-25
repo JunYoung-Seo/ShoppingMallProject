@@ -6,9 +6,16 @@ import dto.Product;
 public class ProductRepository {
 
 	private ArrayList<Product> listOfProducts = new ArrayList<Product>();
-
+	private static ProductRepository instance = new ProductRepository();
+	
+	//다른 여러 클래스에서  instance메소드를 통해서 동일한 ProductRepository를 사용가능
+	public static ProductRepository getInstance() {
+		return instance;
+	}
+	
 	public ProductRepository() {
 
+		
 		// 아이폰 정보
 		Product phone = new Product("p1234", "iPhone12", 1000000);
 		phone.setDescription("6.1-inch, 2532X1170 Super Retina XDR display, 듀얼 12MP 카메라");
@@ -55,6 +62,11 @@ public class ProductRepository {
 			}
 		}
 		return productById;
+	}
+	
+	public void addProduct(Product product) {
+		listOfProducts.add(product);
+		//상품의 정보를 하나하나씩 listOfProducts에 저장
 	}
 
 }

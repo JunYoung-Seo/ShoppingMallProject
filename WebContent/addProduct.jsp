@@ -2,7 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet"
-	href="./resources/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous">
+	href="./resources/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"crossorigin="anonymous">
 <script type="text/javascript" src="./resources/js/validation.js"></script>
 <title>상품 등록</title>
 </head>
@@ -86,7 +87,7 @@
 			
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10">
-					<input type="button" class="btn btn-primary" value="등록" onclick="CheckAddProduct()">o			
+					<input type="button" class="btn btn-primary" value="등록" onclick="CheckAddProduct()">		
 				</div>
 			</div>
 			
